@@ -1,0 +1,80 @@
+body {
+    background: rgb(159, 188, 223);
+    background: linear-gradient( 90deg, rgb(178, 203, 237) 0%, rgb(146, 82, 127) 100%);
+    font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: $color-white;
+}
+
+.container {
+    padding: $space-xl;
+}
+
+.todo__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.todo__form {
+    width: 100%;
+    padding: $space-m;
+    background-color: $color-lightgrey;
+    border-bottom: 1px solid #d3d7da;
+    .todo__input {
+        width: 79%;
+        padding: $space-s;
+    }
+    .todo__button {
+        // styling button for later use
+        background-color: $color-green2;
+        border: 1px solid $color-green2;
+        outline: 0;
+        border-radius: 5px;
+        padding: 8px;
+        color: $color-white;
+        &:hover {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.todo__list {
+    width: 100%;
+    padding: $space-m;
+    background: $color-white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.08);
+    min-height: 100px;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+}
+
+.todo__single {
+    color: $color-grey;
+    padding-left: $space-s;
+}
+
+.fa-trash-alt {
+    padding-left: $space;
+    float: right;
+    &:hover {
+        color: red;
+    }
+}
+
+input[type="checkbox"]:checked+label {
+    text-decoration: line-through;
+}
+
+.delete {
+    display: none;
+}
+
+.todo__id {
+    margin-bottom: 8px;
+}
